@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>JMJ MART</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            JMJ MART
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">Products</a>
+            </li>
+
+            <li>
+                <a href="#">Services</a>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Smart Energy & Technology Store
+            </h1>
+
+            <p>
+                EV Chargers, CCTV, Solar Products,
+                Networking and Smart Solutions
+            </p>
+
+            <button>
+                Explore Products
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="categories">
+
+        <h2>
+            Product Categories
+        </h2>
+
+        <div class="card-container">
+
+            {% for category in categories %}
+
+            <div class="card">
+
+                <img
+                    src="{{ category.image }}"
+                    alt="{{ category.name }}"
+                >
+
+                <h3>
+                    {{ category.name }}
+                </h3>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services">
+
+        <h2>
+            Our Services
+        </h2>
+
+        <div class="service-box">
+
+            <div class="service">
+                EV Charger Installation
+            </div>
+
+            <div class="service">
+                CCTV Installation
+            </div>
+
+            <div class="service">
+                Smart Home Setup
+            </div>
+
+            <div class="service">
+                Networking Solutions
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about">
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <h2>
+                    About JMJ MART
+                </h2>
+
+                <p>
+                    JMJ MART is a modern technology
+                    and smart retail platform focused on
+                    energy-efficient products,
+                    EV infrastructure,
+                    CCTV security systems,
+                    networking and IT solutions.
+                </p>
+
+                <p>
+                    We provide reliable products and
+                    professional services for homes,
+                    offices, societies and businesses.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <div class="contact-box">
+
+            <div class="contact-card">
+
+                <h3>
+                    Phone
+                </h3>
+
+                <p>
+                    +91 XXXXX XXXXX
+                </p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    info@jmjmart.com
+                </p>
+
+            </div>
+
+            <div class="contact-card">
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Navi Mumbai, Maharashtra
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Copyright 2026 JMJ MART
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

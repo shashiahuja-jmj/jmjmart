@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JMJ MART</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <div class="logo">
+            JMJ MART
+        </div>
+
+        <ul>
+
+            <li>Home</li>
+            <li>Products</li>
+            <li>Services</li>
+            <li>Contact</li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Smart Energy & Technology Store
+            </h1>
+
+            <p>
+                EV Chargers, Smart Security,
+                Solar Products and IT Solutions
+            </p>
+
+            <button>
+                Explore Products
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+
+    <section class="categories">
+
+        <h2>
+            Product Categories
+        </h2>
+
+        <div class="card-container">
+
+            {% for category in categories %}
+
+            <div class="card">
+
+                <img
+                    src="{{ category.image }}"
+                    alt="{{ category.name }}"
+                >
+
+                <h3>
+                    {{ category.name }}
+                </h3>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+
+    <section class="services">
+
+        <h2>
+            Our Services
+        </h2>
+
+        <div class="service-box">
+
+            <div class="service">
+                EV Charger Installation
+            </div>
+
+            <div class="service">
+                CCTV Installation
+            </div>
+
+            <div class="service">
+                Smart Home Setup
+            </div>
+
+            <div class="service">
+                Networking Solutions
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 JMJ MART
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
