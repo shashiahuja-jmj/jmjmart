@@ -2,6 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+# Product Categories
 categories = [
     {
         "name": "EV Chargers",
@@ -21,6 +22,7 @@ categories = [
     }
 ]
 
+# Home Page Route
 @app.route("/")
 def home():
     return render_template(
@@ -28,7 +30,9 @@ def home():
         categories=categories
     )
 
+# Run Flask App
 if __name__ == "__main__":
-    app.run(debug=True)
-	if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(
+        host="0.0.0.0",
+        port=5000
+    )
